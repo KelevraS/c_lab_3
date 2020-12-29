@@ -94,13 +94,20 @@ void multiplication()
 	print2DArray(b, rowCountB, colCountB);
 	fclose(fp);
 
-	c = create2DynamicArr(colCountA, rowCountB);
-
-	for (int i = 0; i < colCountA; i++)
+	if (colCountA != rowCountB)
 	{
-		for (int j = 0; j < rowCountB; j++)
+		perror("Matricies are incompatible! ");
+		return 2;
+	}
+
+	c = create2DynamicArr(rowCountA, colCountB);
+
+	for (int i = 0; i < rowCountA; i++)
+	{
+		for (int j = 0; j < colCountB; j++)
 		{
-			for (int k = 0; k < rowCountA; k++)
+			c[i][j] = 0;
+			for (int k = 0; k < colCountA; k++)
 			{
 				c[i][j] += a[i][k] * b[k][j];
 			}
@@ -117,11 +124,9 @@ void multiplication()
 void determinant()
 {
 	int rowCountA, colCountA;
-	int rowCountB, colCountB;
-	int rowCountC, colCountC;
+	float result;
+
 	float** a = NULL;
-	float** b = NULL;
-	float** c = NULL;
 
 	FILE* fp;
 	getPath(pathA, (unsigned)_countof(pathA));
@@ -132,5 +137,6 @@ void determinant()
 	print2DArray(a, rowCountA, colCountA);
 	fclose(fp);
 
-	calculateDeter(a, rowCountA);
+	result = calculateDeterF(a, rowCountA);
+	printf_s("Determinant = %f", result);
 }

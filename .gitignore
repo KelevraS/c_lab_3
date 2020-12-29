@@ -1,1 +1,8 @@
 /.vs
+*.obj
+*.tlog
+*tlog
+/Study_C/Debug/Study_C.tlog/CL.command.1.tlog
+/Study_C/Debug/Study_C.tlog/CL.read.1.tlog
+/Study_C/Debug/Study_C.tlog/CL.write.1.tlog
+/Study_C/Debug/Study_C.tlog/link.read.1.tlog

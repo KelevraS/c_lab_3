@@ -1,2 +1,2 @@
 #pragma once
-void calculateDeter(int** a, int rank);
+float calculateDeterF(float** a, int rank);

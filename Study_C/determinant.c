@@ -2,6 +2,8 @@
 #include <math.h>
 #include <time.h>
 
+#include "arrayUtil.h"
+
 int** createDynamicArr_determinant(int rank)
 {
 	int** a = malloc(rank * sizeof(int*));
@@ -64,6 +66,16 @@ void freeDynamicArr(int **a, int rank)
 	free(a);
 }
 
+void freeDynamicArrF(float** a, int rank)
+{
+	for (int i = 0; i < rank; i++)
+	{
+		free(a[i]);
+	}
+
+	free(a);
+}
+
 void printArray_determinant(int** a, int rank)
 {
 	for (int i = 0; i < rank; i++)
@@ -109,6 +121,37 @@ int* createMinor(int** a, int row, int col, int rank)
 	return minor;
 }
 
+float* createMinorF(float **a, int row, int col, int rank)
+{
+	int minorRank = rank - 1;
+	float **minor = create2DynamicArr(minorRank, minorRank);
+
+	int iMinor = 0;
+
+	for (int i = 0; i < rank; i++)
+	{
+		int jMinor = 0;
+
+		if (i == row)
+			continue;
+
+		for (int j = 0; j < rank; j++)
+		{
+			if (j == col)
+				continue;
+			minor[iMinor][jMinor] = a[i][j];
+			jMinor++;
+		}
+		iMinor++;
+	}
+
+	printf_s("Minor for element A[%d][%d] in rank %d, where minor is:\n", row, col, rank);
+	printArray(minor, minorRank);
+	printf_s(Delimiter);
+
+	return minor;
+}
+
 int calculateDeter(int** a, int rank)
 {
 	int sum = 0;
@@ -131,6 +174,31 @@ int calculateDeter(int** a, int rank)
 	}
 
 	freeDynamicArr (minor, rank - 1);
+	return sum;
+}
+
+float calculateDeterF(float **a, int rank)
+{
+	float sum = 0;
+
+	if (rank == 1)
+	{
+		sum += **a;
+		return sum;
+	}
+
+	float** minor = NULL;
+
+	for (int col = 0; col < rank; col++)
+	{
+		int alternating = -1 * (col % 2 ? 1 : -1);
+		printf_s("a[%d][%d] = %d\n", 0, col, a[0][col]);
+		printf_s("(-1)^(%d + %d) = %d\n", 0 + 1, col + 1, alternating);
+		minor = createMinorF(a, 0, col, rank);
+		sum += alternating * a[0][col] * calculateDeter(minor, rank - 1);
+	}
+
+	freeDynamicArrF(minor, rank - 1);
 	return sum;
 }
 
