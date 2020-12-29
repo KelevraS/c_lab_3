@@ -1,0 +1,32 @@
+﻿  customop.c
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(15,17): warning C4101: colCountC: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(15,6): warning C4101: rowCountC: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(58,17): warning C4101: colCountC: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(58,6): warning C4101: rowCountC: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(118,18): warning C4133: функция: несовместимые типы - из "float **" в "int **"
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(104,17): warning C4101: colCountC: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(103,6): warning C4101: rowCountB: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(104,6): warning C4101: rowCountC: неиспользованная локальная переменная
+  determinant.c
+C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(103,17): warning C4101: colCountB: неиспользованная локальная переменная
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(7,18): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(11,36): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(7,1): warning C4047: инициализация: "int **" отличается по уровням косвенного обращения от "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(25,7): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(31,36): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(35,18): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(27,1): warning C4047: инициализация: "int **" отличается по уровням косвенного обращения от "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(44,28): warning C4013: createDynamicArr: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(44,1): warning C4047: инициализация: "int **" отличается по уровням косвенного обращения от "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(61,7): warning C4013: free: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(106,12): warning C4013: printArray: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(109,14): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(84,1): warning C4047: инициализация: "int **" отличается по уровням косвенного обращения от "int"
+  menuswitch.c
+C:\Users\Максим\source\repos\Study_C\Study_C\determinant.c(129,39): warning C4047: =: "int **" отличается по уровням косвенного обращения от "int *"
+C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(19,13): warning C4013: scanf_s: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(20,9): warning C4013: perror: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(38,14): warning C4013: determinant: нет определения; предполагается "extern" с возвратом типа "int"
+  Создание кода...
+C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(54,11): warning C4013: printf_s: нет определения; предполагается "extern" с возвратом типа "int"
+  Study_C.vcxproj -> C:\Users\Максим\source\repos\Study_C\Debug\Study_C.exe
