@@ -145,9 +145,9 @@ float* createMinorF(float **a, int row, int col, int rank)
 		iMinor++;
 	}
 
-	printf_s("Minor for element A[%d][%d] in rank %d, where minor is:\n", row, col, rank);
+	/*printf_s("Minor for element A[%d][%d] in rank %d, where minor is:\n", row, col, rank);
 	printArray(minor, minorRank);
-	printf_s(Delimiter);
+	printf_s(Delimiter);*/
 
 	return minor;
 }
@@ -167,8 +167,8 @@ int calculateDeter(int** a, int rank)
 	for (int col = 0; col < rank; col++)
 	{
 		int alternating = -1 * (col % 2 ? 1 : -1);
-		printf_s("a[%d][%d] = %d\n", 0, col, a[0][col]);
-		printf_s("(-1)^(%d + %d) = %d\n", 0 + 1, col + 1, alternating);
+		/*printf_s("a[%d][%d] = %d\n", 0, col, a[0][col]);
+		printf_s("(-1)^(%d + %d) = %d\n", 0 + 1, col + 1, alternating);*/
 		minor = createMinor(a, 0, col, rank);
 		sum += alternating * a[0][col] * calculateDeter(minor, rank - 1);
 	}
@@ -192,10 +192,10 @@ float calculateDeterF(float **a, int rank)
 	for (int col = 0; col < rank; col++)
 	{
 		int alternating = -1 * (col % 2 ? 1 : -1);
-		printf_s("a[%d][%d] = %d\n", 0, col, a[0][col]);
-		printf_s("(-1)^(%d + %d) = %d\n", 0 + 1, col + 1, alternating);
+		/*printf_s("a[%d][%d] = %f\n", 0, col, a[0][col]);
+		printf_s("(-1)^(%d + %d) = %d\n", 0 + 1, col + 1, alternating);*/
 		minor = createMinorF(a, 0, col, rank);
-		sum += alternating * a[0][col] * calculateDeter(minor, rank - 1);
+		sum += alternating * a[0][col] * calculateDeterF(minor, rank - 1);
 	}
 
 	freeDynamicArrF(minor, rank - 1);
