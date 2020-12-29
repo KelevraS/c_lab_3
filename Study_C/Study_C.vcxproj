@@ -131,6 +131,7 @@
     <ClCompile Include="customop.c" />
     <ClCompile Include="determinant.c" />
     <ClCompile Include="eigen.c" />
+    <ClCompile Include="exponent.c" />
     <ClCompile Include="fileUtil.c" />
     <ClCompile Include="Input.c" />
     <ClCompile Include="main.c" />

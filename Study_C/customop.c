@@ -19,7 +19,13 @@ void addition()
 
 	FILE* fp;
 	getPath(pathA, (unsigned)_countof(pathA));
-	fopen_s(&fp, pathA, "r");
+
+	if (fopen_s(&fp, pathA, "r") != 0)
+	{
+		perror("File error occured in reading! ", pathA);
+		return 1;
+	}
+
 	getArrayDimension(fp, &rowCountA, &colCountA);
 	a = create2DynamicArr(rowCountA, colCountA);
 	load2DArrayFromFile(a, &rowCountA, &colCountA, fp);
@@ -27,7 +33,13 @@ void addition()
 	fclose(fp);
 
 	getPath(pathB, (unsigned)_countof(pathB));
-	fopen_s(&fp, pathB, "r");
+
+	if (fopen_s(&fp, pathB, "r") != 0)
+	{
+		perror("File error occured in reading! ", pathB);
+		return 1;
+	}
+
 	getArrayDimension(fp, &rowCountB, &colCountB);
 	b = create2DynamicArr(rowCountB, colCountB);
 	load2DArrayFromFile(b, &rowCountB, &colCountB, fp);
@@ -45,7 +57,12 @@ void addition()
 	}
 
 	getPath(pathC, (unsigned)_countof(pathC));
-	fopen_s(&fp, pathC, "w");
+
+	if (fopen_s(&fp, pathC, "w") != 0)
+	{
+		perror("File error occured in writing ");
+		return 1;
+	}
 	save2DArrayToFile(c, rowCountA, colCountA, fp);
 	print2DArray(c, rowCountA, colCountA);
 	fclose(fp);
