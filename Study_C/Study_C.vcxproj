@@ -134,6 +134,7 @@
     <ClCompile Include="eigensolver.c" />
     <ClCompile Include="exponent.c" />
     <ClCompile Include="fileUtil.c" />
+    <ClCompile Include="givenrotation.c" />
     <ClCompile Include="Input.c" />
     <ClCompile Include="magicsquare.c" />
     <ClCompile Include="main.c" />
@@ -147,6 +148,7 @@
     <ClInclude Include="determinant.h" />
     <ClInclude Include="eigensolver.h" />
     <ClInclude Include="fileUtil.h" />
+    <ClInclude Include="giverotation.h" />
     <ClInclude Include="magicsquare.h" />
     <ClInclude Include="menuswitch.h" />
     <ClInclude Include="rancounter.h" />

@@ -3,6 +3,7 @@
 #include "rancounter.h"
 #include "eigensolver.h"
 #include "magicsquare.h" 
+#include "giverotation.h"
 
 enum OperationType
 {
@@ -42,7 +43,7 @@ void selectOperation(int operation)
 		break;
 
 	case Eigen:
-		eigen();
+		eigenGivens();
 		break;
 
 	case Rank:

@@ -68,6 +68,21 @@ void addition()
 	fclose(fp);
 }
 
+void multiplicateArray(float** a, float** b, float** c, int rowCountA, int colCountA, int rowCountB, int colCountB)
+{
+	for (int i = 0; i < rowCountA; i++)
+	{
+		for (int j = 0; j < colCountB; j++)
+		{
+			c[i][j] = 0;
+			for (int k = 0; k < colCountA; k++)
+			{
+				c[i][j] += a[i][k] * b[k][j];
+			}
+		}
+	}
+}
+
 void multiplication()
 {
 	int rowCountA, colCountA;
@@ -123,20 +138,7 @@ void multiplication()
 	fclose(fp);
 }
 
-void multiplicateArray(float** a, float** b, float** c, int rowCountA, int colCountA, int rowCountB, int colCountB)
-{
-	for (int i = 0; i < rowCountA; i++)
-	{
-		for (int j = 0; j < colCountB; j++)
-		{
-			c[i][j] = 0;
-			for (int k = 0; k < colCountA; k++)
-			{
-				c[i][j] += a[i][k] * b[k][j];
-			}
-		}
-	}
-}
+
 
 void determinant()
 {

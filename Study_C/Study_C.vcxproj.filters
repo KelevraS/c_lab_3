@@ -54,6 +54,9 @@
     <ClCompile Include="magicsquare.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="givenrotation.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrayUtil.h">
@@ -81,6 +84,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="magicsquare.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="giverotation.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

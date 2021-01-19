@@ -1,22 +1,13 @@
-﻿  customop.c
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(25,50): warning C4020: perror: слишком много фактических параметров
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(26,11): warning C4098: addition: функция типа "void", возвращающая значение
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(39,50): warning C4020: perror: слишком много фактических параметров
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(40,11): warning C4098: addition: функция типа "void", возвращающая значение
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(64,11): warning C4098: addition: функция типа "void", возвращающая значение
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(15,17): warning C4101: colCountC: неиспользованная локальная переменная
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(15,6): warning C4101: rowCountC: неиспользованная локальная переменная
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(100,11): warning C4098: multiplication: функция типа "void", возвращающая значение
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(117,19): warning C4013: multiplicateArray: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(75,17): warning C4101: colCountC: неиспользованная локальная переменная
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(75,6): warning C4101: rowCountC: неиспользованная локальная переменная
-  exponent.c
-C:\Users\Максим\source\repos\Study_C\Study_C\customop.c(126,6): error C2371: multiplicateArray: переопределение; различные базовые типы
-C:\Users\Максим\source\repos\Study_C\Study_C\exponent.c(40,50): warning C4020: perror: слишком много фактических параметров
-  main.c
-  menuswitch.c
-C:\Users\Максим\source\repos\Study_C\Study_C\exponent.c(41,11): warning C4098: exponent: функция типа "void", возвращающая значение
-C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(22,13): warning C4013: scanf_s: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(23,9): warning C4013: perror: нет определения; предполагается "extern" с возвратом типа "int"
-  Создание кода...
-C:\Users\Максим\source\repos\Study_C\Study_C\menuswitch.c(60,11): warning C4013: printf_s: нет определения; предполагается "extern" с возвратом типа "int"
+﻿  givenrotation.c
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(21,13): warning C4013: fabs: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(21,22): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(25,13): warning C4013: sqrt: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(25,24): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(27,46): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(29,68): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(31,30): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(33,22): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(9,1): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(79,50): warning C4020: perror: слишком много фактических параметров
+C:\Users\Максим\source\repos\Study_C\Study_C\givenrotation.c(80,11): warning C4098: eigenGivens: функция типа "void", возвращающая значение
+  Study_C.vcxproj -> C:\Users\Максим\source\repos\Study_C\Debug\Study_C.exe
