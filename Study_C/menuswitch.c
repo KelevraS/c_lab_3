@@ -1,5 +1,8 @@
 #include "customop.h"
 #include "determinant.h"
+#include "rancounter.h"
+#include "eigensolver.h"
+#include "magicsquare.h" 
 
 enum OperationType
 {
@@ -39,15 +42,18 @@ void selectOperation(int operation)
 		break;
 
 	case Eigen:
+		eigen();
 		break;
 
 	case Rank:
+		rank();
 		break;
 
 	case Exponent:
 		break;
 
 	case Magic:
+		magicSquare();
 		break;
 
 	default:

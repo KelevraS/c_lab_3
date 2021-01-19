@@ -102,6 +102,29 @@ void multiplication()
 
 	c = create2DynamicArr(rowCountA, colCountB);
 
+	/*for (int i = 0; i < rowCountA; i++)
+	{
+		for (int j = 0; j < colCountB; j++)
+		{
+			c[i][j] = 0;
+			for (int k = 0; k < colCountA; k++)
+			{
+				c[i][j] += a[i][k] * b[k][j];
+			}
+		}
+	}*/
+
+	multiplicateArray(a, b, c, rowCountA, colCountA, rowCountB, colCountB);
+
+	getPath(pathC, (unsigned)_countof(pathC));
+	fopen_s(&fp, pathC, "w");
+	save2DArrayToFile(c, rowCountA, colCountA, fp);
+	print2DArray(c, rowCountA, colCountA);
+	fclose(fp);
+}
+
+void multiplicateArray(float** a, float** b, float** c, int rowCountA, int colCountA, int rowCountB, int colCountB)
+{
 	for (int i = 0; i < rowCountA; i++)
 	{
 		for (int j = 0; j < colCountB; j++)
@@ -113,12 +136,6 @@ void multiplication()
 			}
 		}
 	}
-
-	getPath(pathC, (unsigned)_countof(pathC));
-	fopen_s(&fp, pathC, "w");
-	save2DArrayToFile(c, rowCountA, colCountA, fp);
-	print2DArray(c, rowCountA, colCountA);
-	fclose(fp);
 }
 
 void determinant()

@@ -15,7 +15,7 @@ int main_input(void)
 {
 	//pathToFile = getPath();
 	getPath(pathToFile, (unsigned)_countof(pathToFile));
-	/*
+	
 	printf_s("Input row and col count:\n");
 	scanf_s("%d %d", &rowCount, &colCount);
 
@@ -31,9 +31,9 @@ int main_input(void)
 	fclose(fp);
 
 	free(arr);
-	*/
+	
 
-	FILE* fp;
+	/*FILE* fp;
 	fopen_s(&fp, pathToFile, "r");
 	getArrayDimension(fp, &rowCount, &colCount);
 	arr2d = create2DynamicArr(rowCount, colCount);
@@ -45,7 +45,7 @@ int main_input(void)
 
 	free(arr2d);
 
-	printf_s("%d %d", rowCount, colCount);
+	printf_s("%d %d", rowCount, colCount);*/
 
 	return 0;
 }

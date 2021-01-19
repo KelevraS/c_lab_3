@@ -131,19 +131,25 @@
     <ClCompile Include="customop.c" />
     <ClCompile Include="determinant.c" />
     <ClCompile Include="eigen.c" />
+    <ClCompile Include="eigensolver.c" />
     <ClCompile Include="exponent.c" />
     <ClCompile Include="fileUtil.c" />
     <ClCompile Include="Input.c" />
+    <ClCompile Include="magicsquare.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="menuswitch.c" />
+    <ClCompile Include="rancounter.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrayUtil.h" />
     <ClInclude Include="customIO.h" />
     <ClInclude Include="customop.h" />
     <ClInclude Include="determinant.h" />
+    <ClInclude Include="eigensolver.h" />
     <ClInclude Include="fileUtil.h" />
+    <ClInclude Include="magicsquare.h" />
     <ClInclude Include="menuswitch.h" />
+    <ClInclude Include="rancounter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
