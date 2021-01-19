@@ -7,14 +7,6 @@
 
 #define ITERATIONS 10
 
-void calculate_exponent(float **source, float **res, int rowCount, int colCount)
-{
-	for (int i = 0; i < ITERATIONS; i++)
-	{
-		
-	}
-}
-
 int getFactorial(int n)
 {
 	int res = 1;
@@ -24,6 +16,50 @@ int getFactorial(int n)
 
 	return res;
 }
+
+void calculate_exponent(float **source, float **res, int rowCount, int colCount)
+{
+	float** temp = create2DynamicArr(rowCount, colCount);
+
+	for (int i = 0; i < rowCount; i++)
+	{
+		for (int j = 0; j < rowCount; j++)
+		{
+			res[i][j] = source[i][j];
+		}
+	}
+
+	for (int i = 1; i < ITERATIONS; i++)
+	{
+		for (int j = 1; j < i; j++)
+		{
+			multiplicateArray(source, source, temp, rowCount, colCount, rowCount, colCount);
+		}
+
+		for (int j = 0; j < rowCount; j++)
+		{
+			for (int k = 0; k < rowCount; k++)
+				temp[j][k] /= getFactorial(i);
+		}
+
+		for (int i = 0; i < rowCount; i++)
+		{
+			for (int j = 0; j < rowCount; j++)
+			{
+				res[i][j] = temp[i][j];
+			}
+		}
+
+		for (int i = 0; i < rowCount; i++)
+		{
+			for (int j = 0; j < rowCount; j++)
+			{
+				temp[i][j] = 0;
+			}
+		}
+	}
+}
+
 
 char pathA[256];
 
@@ -50,4 +86,6 @@ void exponent()
 	float** b = create2DynamicArr(rowCountA, colCountA);
 
 	calculate_exponent(a, b, colCountA, rowCountA);
+
+	print2DArray(b, colCountA, rowCountA);
 }
